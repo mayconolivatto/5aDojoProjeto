@@ -1,0 +1,12 @@
+Adicinei um Log maior para realizar testes,
+
+O projeto está usando springboot, jsf, primefaces.
+Gerar maven build, estou utilizando java8
+rodar usando springapp.
+o Arquivo logpartida é responsavle pelo log caso queria é so trocar o mesmo.
+
+deixei um arquivo de configuração aplication.properties para alterar a porta caso precise.
+
+
+Test case pode ser rodados pelo spring app.
+

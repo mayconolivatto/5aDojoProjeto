@@ -1,0 +1,74 @@
+<f:view xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:ng="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>#{menuController.title}</title>
+		<style>
+body {
+	font-size: 12px;
+}
+</style>
+	</h:head>
+	<h:body>
+
+	
+
+
+		<h:form>
+			<p:growl id="messages" showDetail="true" />
+			<p:panel header="Projeto Dojo Jogo">
+
+	<h3>Exemplo de como o log é carregado</h3>
+
+
+
+
+
+
+
+
+				<p:dataTable var="partida" value="#{jogoController.listPartida}">
+					<p:column headerText="Partida" width="50%"
+						style="text-align:center;">
+						<h:outputText value="#{partida.partida}" />
+						<p:dataTable var="dados" value="#{partida.listDadosPartidaVo}">
+							<p:column headerText="Jogador">
+								<h:outputText value="#{dados.jogador}" />
+							</p:column>
+							<p:column headerText="Mortes">
+								<h:outputText value="#{dados.mortes}" />
+							</p:column>
+							<p:column headerText="Awards">
+								<h:outputText value="#{dados.awards}" />
+							</p:column>
+							<p:column headerText="Assassinatos">
+								<h:outputText value="#{dados.assassinatos}" />
+							</p:column>
+						</p:dataTable>
+					</p:column>
+					<p:column headerText="Vencedor" style="text-align:center;">
+						<h:outputText value="#{partida.vencedor}" />
+					</p:column>
+					<p:column headerText="ArmaPreferida" style="text-align:center;">
+						<h:outputText value="#{partida.armaPreferida}" />
+					</p:column>
+					<p:column headerText="Maior Kill Streak" style="text-align:center;">
+						<h:outputText
+							value="Maior kill streak: #{partida.maiorKillStreak} | Feito por: #{partida.maiorKillStreakJogador} " />
+					</p:column>
+
+
+
+
+
+				</p:dataTable>
+			</p:panel>
+
+		</h:form>
+	</h:body>
+</f:view>
