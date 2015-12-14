@@ -1,0 +1,5 @@
+Adicinei um Log maiorpara realizar testes,
+
+Para testar o programa, basta rodar a classe Main.
+
+Test Suite usando junit criada para rodar todos os testes unitários.
